@@ -1,0 +1,38 @@
+<?php
+
+return [
+    'RECEIVEPAYMENT' => 'Quick Payment',
+    'RECEIVE_CUSTOMER_PAYMENT' => 'Receive Customer Payment',
+    'PAYMENTLIST' => 'Payment List',
+    'DUELIST' => 'Due List',
+    'SELECT-STUDENT' => 'Select Student',
+    'STUDENT-ID' => 'Student ID',
+    'STUDENT-CUSTOMER-ID' => 'Student/Customer ID',
+    'welcome' => 'Welcome, this is Payment module.',
+    'PAYMENT' => 'Payment',
+    'DUE' => 'Due',
+    'AND' => '&',
+    'EXPENSE' => 'Expense',
+    'CHART' => 'Chart',
+    'WITHDRAW' => 'Withdraw',
+    'SAVE' => 'Save',
+    'CHART' => 'Chart',
+    'LIST' => 'List',
+    'ADD' => 'Add',
+    'EDIT' => 'Edit',
+    'CUSTOMER' => 'Customer',
+    'UPDATE' => 'Update',
+    'PAYMENT_UPDATED_SUCCESSFULLY' => 'Payment Updated Successfully',
+    // For Account Setting
+    'ACCOUNT' => 'Account',
+    'CATEGORY' => 'Category',
+    'ACCOUNT_SETTING' => 'Account Setting',
+    'ITEM_SEARCH' => 'Item Search',
+    'MONTH' => 'Month',
+    'START_DATE' => 'Start Date',
+    'END_DATE' => 'End Date',
+    'INVOICE' => 'Invoice',
+    'PAYMENT_EDIT' => 'Payment Edit',
+    'SELECT-CUSTOMER' =>'SELECT CUSTOMER',
+    'OTHER' =>'Other'
+];

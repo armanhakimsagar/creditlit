@@ -1,0 +1,8 @@
+*Doha Ac Repair Maintenance Service
+DB_User = dohanqxz_dohaacrepairmaintenance_primary_user
+DB_Name = dohanqxz_dohaacrepairmaintenance
+Password = *k]k]=@n)(xh
+
+**Login Access
+User_name = mainAdminNayem
+Password = 1PBBPxE3*wYG9zFgskdf*fTW

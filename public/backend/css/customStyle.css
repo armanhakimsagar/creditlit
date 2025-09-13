@@ -1,0 +1,20 @@
+.lightGray {
+    background: lightgray !important;
+    color: blue;
+}
+
+select.form-control.selectHeight40px:not([size]):not([multiple]){
+    height:40px;
+}
+
+.sidebar .menu{
+    height: auto!important;
+}
+
+.content{
+    min-height:600px!important;
+}
+
+.slimScrollBar{
+    width: 10px!important;
+}

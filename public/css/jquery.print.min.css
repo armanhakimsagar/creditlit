@@ -1,0 +1,91 @@
+/*
+ * @description Custom stylesheet
+ * @file        print.css
+ * @author      Esteem Corporation
+ * @contact     http://esteemcorporation.com/contact.php
+ * @copyright   Copyright 2011-2017 Esteem Corporation.
+*/
+@media print {
+    lable{
+    font-weight: 600;
+    }
+    .printing_option {
+    display: block;
+    }
+}
+
+@media print  {
+.col-lg-6 {
+  width: 50%;
+  float: left;
+}
+
+body {
+    background-color: #fff;
+    color: #333;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 11px;
+    line-height: 1.22857;
+}
+.col-md-2{
+  width: 20%;
+  float: left;
+}
+.col-md-3{
+  width: 25%;
+  float: left;
+}
+.col-md-4{
+  width: 33.33333%;
+  float: left;
+}
+.form-control {
+  font-size: 12px;
+}
+.input-group-btn .btn {
+    padding: 12px 12px;
+}
+.table thead > tr > th, .table tbody > tr > th, .table tfoot > tr > th, .table thead > tr > td, .table tbody > tr > td, .table tfoot > tr > td {
+  border-top: 1px solid #ddd;
+  line-height: 1.1;
+  font-family: "Arial",Helvetica,sans-serif;
+  padding: 4px;
+  vertical-align: top;
+  font-size: 10px;
+}
+.table-bordered > thead > tr > th, .table-bordered > tbody > tr > th, .table-bordered > tfoot > tr > th, .table-bordered > thead > tr > td, .table-bordered > tbody > tr > td, .table-bordered > tfoot > tr > td{
+	border: 1px solid #1f1d1d!important;
+}
+.table-bordered {
+    border: 2px solid #1f1d1d;
+}
+h4 {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 12px;
+}
+.panel {
+    margin-bottom: 10px;
+ }
+ .panel-body {
+    padding: 5px;
+}
+}
+@media print{
+	/*Panel Heading Colour In print mode*/
+	.panel-success>.panel-heading {
+		color: #3c763d!important;
+		border-color: #c1e2b3!important;
+		background: linear-gradient(90deg,#c1e2b3,#dff0d8,#c1e2b3)!important;
+	}
+	.panel-primary>.panel-heading {
+		background: linear-gradient(90deg,#337ab7,#84afd3,#337ab7)!important;
+		color: #fff!important;
+	}
+	.panel-info>.panel-heading {
+		color: #31708f!important;
+		background: linear-gradient(90deg,#afd9ee,#d9edf7,#afd9ee)!important;
+		border-color: #afd9ee!important;
+	}
+	/*Panel Heading Colour In print mode*/
+}

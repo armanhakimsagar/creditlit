@@ -1,0 +1,75 @@
+
+
+<div class="row">
+
+    <div class="col-md-6">
+        <div class="form-group">
+            <div class="form-line">
+                {!! Form::label('name', 'Section Name', array('class' => 'col-form-label')) !!} <span class="required"> *</span>
+                {!! Form::text('name',old('name'),['id'=>'name','class' => 'form-control','required'=> 'required',  'placeholder'=>'Enter Section name']) !!}
+                <span class="error"> {!! $errors->first('name') !!}</span>
+            </div>
+        </div>
+    </div>
+   
+
+    <div class="col-md-6">
+        <div class="row">
+           <div class="col-md-10">
+                <div class="form-group">
+                    <div class="form-line">
+                        {!!  Form::label('status', 'Status', array('class' => 'col-form-label')) !!} <span
+                                class="required"> *</span>
+
+                        {!! Form::Select('status',array('active'=>'Active','inactive'=>'Inactive','cancel' => 'Cancel'),old('status'),['id'=>'status', 'class'=>'form-control selectheight']) !!}
+                        <span class="error"> {!! $errors->first('status') !!}</span>
+                    </div>
+                </div>
+            </div>
+            <input type="hidden" name="is_trash" value="0">
+            <div class="col-md-2">
+
+                <div class=" float-right mt-5">
+                    <button class="btn btn-primary btn-sm ml-auto waves-effect waves-themed" onclick="Validator();"  id="btnsm"   type="submit">Save</button>
+                </div>
+            </div>    
+        </div>   
+    </div>
+
+
+
+</div>
+
+<script>
+
+    $(function () {
+
+        $("#section").validate({
+            rules: {
+                name: {
+                    required: true,
+                },
+    
+                status: {
+                    required: true
+                },
+                class_id: {
+                    required: true
+                }
+
+            },
+            messages: {
+                name: 'Please enter name',
+                status: 'Please choose status',
+                class_id: 'Please choose class'
+            }
+        });
+        $( ".select2").select2();
+
+        $(".select2").change(function(){  
+            $('#classId').hide(); 
+        });
+    });
+
+
+</script>
