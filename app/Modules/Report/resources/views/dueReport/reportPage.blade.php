@@ -495,15 +495,15 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td>Customer Name</td>
-                            <td>MUTUAL TRUST BANK PLC</td>
-                            <td>Delivery Date</td>
-                            <td>December 24, 2024</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
                         </tr>
                         <tr>
-                            <td>Order Number</td>
-                            <td>24122439</td>
-                            <td>Customer Reference No</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
                             <td>-</td>
                         </tr>
                     </tbody>
@@ -527,19 +527,18 @@
                     <tbody>
                         <tr>
                             <td>Name</td>
-                            <td>SEYAS ELECTRONICS CO. LTD.</td>
-                            <td>Same As Verified Name</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
                         </tr>
                         <tr>
                             <td>Address</td>
-                            <td>Address: No. 87 , Dongfu 4th Road, Dongfeng,
-                                Zhongshan, Guangdong, China 528425</td>
-                            <td>Incomplete Given Address</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
                         </tr>
                         <tr>
                             <td>Country</td>
-                            <td>China</td>
-                            <td>Same As Verified Country Name</td>
+                            <td>N/A</td>
+                            <td>N/A</td>
                         </tr>
                     </tbody>
 
@@ -556,106 +555,69 @@
                     <tbody>
                         <tr>
                             <td width="20%">Name</td>
-                            <td>SEYAS ELECTRONICS CO., LTD.
+                            <td>{{ $englishName }}
                             </td>
                         </tr>
                         <tr>
                             <td>Chinees Name</td>
-                            <td>广东西雅斯智能科技有限公司</td>
+                            <td>{{ $chineseName }}</td>
                         </tr>
                         <tr>
                             <td>Former Name</td>
-                            <td>STABA ELECTRIC CO., LTD.</td>
+                            <td>N/A</td>
                         </tr>
                         <tr>
                             <td>Registered Address</td>
-                            <td>3, Zhi, 5th and 6th Floor, No.87, Dongfu No 4 Road
-                                Jichang Village, Dongfeng Town/td>
+                            <td>{{ $addressDetail }}</td>
                         </tr>
                         <tr>
                             <td>City</td>
-                            <td>Zhongshan</td>
+                            <td>N/A</td>
                         </tr>
                         <tr>
                             <td>Province</td>
-                            <td>Guangdong</td>
+                            <td>N/A</td>
                         </tr>
                         <tr>
                             <td>Postal Code</td>
-                            <td>528425</td>
+                            <td>N/A</td>
                         </tr>
                         <tr>
                             <td>Country</td>
-                            <td>China</td>
+                            <td>N/A</td>
                         </tr>
                         <tr>
                             <td>Mobile</td>
-                            <td>+86 18718098845</td>
+                            <td>N/A</td>
                         </tr>
                         <tr>
                             <td>Telephone</td>
                             <td>
-                                <p>+86 076022579863</p>
-                                <p>+86 076022579879</p>
+                                <p>{{ $telephone }}</p>
                             </td>
                         </tr>
                         <tr>
                             <td>Fax</td>
-                            <td>+86 076023752900
+                            <td>N/A
                             </td>
                         </tr>
                         <tr>
                             <td>Email</td>
                             <td>
-                                <p>info@staba.hk</p>
-                                <p>3360565161@qq.com</p>
+                                <p>{{ $email }}</p>
                             </td>
                         </tr>
                         <tr>
                             <td>Website</td>
-                            <td>www.stabapower.com</td>
+                            <td>N/A</td>
                         </tr>
                         <tr>
                             <td>Key Person </td>
-                            <td>Deng Huizhen (Supervisor)</td>
+                            <td>{{ $legalRepresentative }}</td>
                         </tr>
                         <tr>
                             <td>Business Sector</td>
-                            <td>General projects: automatic voltage stabilizer, uninterrupted power supply, industrial
-                                voltage
-                                regulator, automatic voltage converter, automatic voltage safeguard, rechargeable fan,
-                                technical
-                                services, technology development, technical consultation, technology exchange,
-                                technology
-                                transfer, technology promotion; transformer, rectifier and inductor manufacturing; smart
-                                home
-                                consumer device manufacturing; manufacturing of lighting fixtures; manufacturing of
-                                distribution
-                                switch control equipment; manufacturing of power transmission, distribution and control
-                                equipment; hardware product manufacturing; electronic component manufacturing; electric
-                                machine manufacturing; fans and fan manufacturing; manufacturing of plastic products;
-                                sales of
-                                electrical machinery and equipment; sales of smart home consumer devices; sales of
-                                household
-                                appliances; sales of lighting fixtures; sales of distribution switch control equipment;
-                                sales of power
-                                electronic components; sales of fans and fans; mold sales; sales of plastic products;
-                                research and
-                                development of household appliances; research and development of distribution switch
-                                control
-                                equipment; research and development of motors and their control systems; hardware
-                                product
-                                research and development; software development. (except for projects that require
-                                approval
-                                according to law, business activities can be carried out independently according to law
-                                with a
-                                business license) licensed projects: import and export of goods; technology import and
-                                export.
-                                (projects that require approval according to law can only carry out business activities
-                                after being
-                                approved by relevant departments. Specific business projects are subject to the approval
-                                of
-                                relevant departments, documents or licenses)</td>
+                            <td>{{ $legalScopeOfOperation }}</td>
                         </tr>
                     </tbody>
 
@@ -672,55 +634,24 @@
                     <tbody>
                         <tr>
                             <td width="20%">Legal Form</td>
-                            <td>Limited Liabilities Company</td>
+                            <td>{{ $theNatureOfTheEnterprise }}</td>
                         </tr>
                         <tr>
                             <td>Registration Date</td>
-                            <td>08-03-2016
+                            <td>{{ $timeOfEstablishment }}
                             </td>
                         </tr>
                         <tr>
                             <td>Registration No</td>
-                            <td>442000001314138</td>
+                            <td>{{ $registrationNumber }}</td>
                         </tr>
                         <tr>
                             <td>Issuing Authority</td>
-                            <td>Market Supervision Administration - Zhongshan City</td>
+                            <td>{{ $registrationAuthority }}</td>
                         </tr>
                         <tr>
                             <td>Status</td>
-                            <td>Active</td>
-                        </tr>
-
-
-                    </tbody>
-
-                </table>
-
-                <br>
-
-                <table>
-                    <tbody>
-                        <tr>
-                            <td width="20%">Legal Form</td>
-                            <td>Limited Liabilities Company</td>
-                        </tr>
-                        <tr>
-                            <td>Registration Date</td>
-                            <td>08-03-2016
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Registration No</td>
-                            <td>91442000MA4UMD9049</td>
-                        </tr>
-                        <tr>
-                            <td>Issuing Authority</td>
-                            <td>Market Supervision Administration - Zhongshan City</td>
-                        </tr>
-                        <tr>
-                            <td>Status</td>
-                            <td>Active</td>
+                            <td>{{ $enterpriseState }}</td>
                         </tr>
 
 
@@ -734,60 +665,25 @@
         <section class="registration-details">
             <h2 class="heading-item">Registration Changes</h2>
             <div class="company-inquiry-details-item">
-                <table>
-                    <tbody>
-                        <tr>
-                            <td width="20%">Date</td>
-                            <td>Limited Liabilities Company</td>
-                        </tr>
-                        <tr>
-                            <td>Item Changed </td>
-                            <td>0Business scope
-                            </td>
-                        </tr>
+
+                @foreach ($regModifys as $regModify)
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td width="20%">Date</td>
+                                <td>{{ $regModify['changeDate'] }}</td>
+                            </tr>
+                            <tr>
+                                <td>Item Changed </td>
+                                <td>{{ $regModify['changeTheProject'] }}
+                                </td>
+                            </tr>
 
 
-                    </tbody>
+                        </tbody>
 
-                </table>
-
-                <br>
-
-                <table>
-                    <tbody>
-                        <tr>
-                            <td width="20%">Date</td>
-                            <td>Limited Liabilities Company</td>
-                        </tr>
-                        <tr>
-                            <td>Item Changed </td>
-                            <td>0Business scope
-                            </td>
-                        </tr>
-
-
-                    </tbody>
-
-                </table>
-
-                <br>
-
-                <table>
-                    <tbody>
-                        <tr>
-                            <td width="20%">Date</td>
-                            <td>Limited Liabilities Company</td>
-                        </tr>
-                        <tr>
-                            <td>Item Changed </td>
-                            <td>0Business scope
-                            </td>
-                        </tr>
-
-
-                    </tbody>
-
-                </table>
+                    </table>
+                @endforeach
 
 
             </div>
@@ -803,11 +699,11 @@
                     <tbody>
                         <tr>
                             <td width="20%">Authorized Capital</td>
-                            <td>CNY 10,000,000</td>
+                            <td>{{ $registeredCurrency }} {{ $registeredCurrency }}</td>
                         </tr>
                         <tr>
                             <td>Paid-Up Capital</td>
-                            <td>CNY 10,000,000
+                            <td>{{ $registeredCurrency }} {{ $collectionOfCapital }}
                             </td>
                         </tr>
 
@@ -829,7 +725,7 @@
                     <tbody>
                         <tr>
                             <td width="20%">Name</td>
-                            <td>Deng Huizhen</td>
+                            <td>{{ $firstShareholder }}</td>
                         </tr>
                         <tr>
                             <td>% of Shares</td>
@@ -837,49 +733,11 @@
                         </tr>
                         <tr>
                             <td>Capital Contributed</td>
-                            <td>CNY 5,000,000</td>
+                            <td>{{ $registeredCurrency }} {{ $firstShareholderCapital }}</td>
                         </tr>
                         <tr>
                             <td>Investment Way</td>
-                            <td>Capital</td>
-                        </tr>
-                        <tr>
-                            <td>Address</td>
-                            <td>
-                                <address>
-                                    3, Zhi, 5th and 6th Floor, No.87, Dongfu No 4 Road
-                                    Jichang Village, Dongfeng Town
-                                    Zhongshan 528425
-                                    Guangdong
-                                    China
-                                </address>
-                            </td>
-                        </tr>
-
-
-                    </tbody>
-
-                </table>
-
-                <br>
-
-                <table>
-                    <tbody>
-                        <tr>
-                            <td width="20%">Name</td>
-                            <td>Deng Yuhua</td>
-                        </tr>
-                        <tr>
-                            <td>% of Shares</td>
-                            <td>50.00 %</td>
-                        </tr>
-                        <tr>
-                            <td>Capital Contributed</td>
-                            <td>CNY 5,000,000</td>
-                        </tr>
-                        <tr>
-                            <td>Investment Way</td>
-                            <td>Capital</td>
+                            <td>{{ $theCountryOfShareholders }}</td>
                         </tr>
                         <tr>
                             <td>Address</td>
@@ -908,104 +766,50 @@
             <h2 class="heading-item">Board of Directors
             </h2>
             <div class="share-capitals-item">
+                @foreach ($directorSupervisors as $directorSupervisor)
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td width="20%">Name</td>
+                                <td>{{ $directorSupervisor['directorSupervisorBase']['fullName'] }}</td>
+                            </tr>
+                            <tr>
+                                <td>Chinese Name</td>
+                                <td>N/A</td>
+                            </tr>
+                            <tr>
+                                <td>Board Title</td>
+                                <td>{{ $directorSupervisor['directorSupervisorBase']['position'] }}</td>
+                            </tr>
+                            <tr>
+                                <td>ID Number</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>Nationality</td>
+                                <td>N/A</td>
+                            </tr>
+                            <tr>
+                                <td>Gender</td>
+                                <td>N/A</td>
+                            </tr>
+                            <tr>
+                                <td>Other Directorship(s)</td>
+                                <td>
+                                    N/A
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Address</td>
+                                <td>
+                                    N/A
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
 
-                <table>
-                    <tbody>
-                        <tr>
-                            <td width="20%">Name</td>
-                            <td>Deng Yuhua</td>
-                        </tr>
-                        <tr>
-                            <td>Chinese Name</td>
-                            <td>邓宇华</td>
-                        </tr>
-                        <tr>
-                            <td>Board Title</td>
-                            <td>Managing Director and General Manager</td>
-                        </tr>
-                        <tr>
-                            <td>ID Number</td>
-                            <td>-</td>
-                        </tr>
-                        <tr>
-                            <td>Nationality</td>
-                            <td>Chinese</td>
-                        </tr>
-                        <tr>
-                            <td>Gender</td>
-                            <td>Male</td>
-                        </tr>
-                        <tr>
-                            <td>Other Directorship(s)</td>
-                            <td>
-                                <p>Guangdong Su Po Motor Science And Technology Co., LTD.</p>
-                                <p>Staba Electric Co., Ltd.</p>
-                                <p>Zhongshan Heng Ji Assets Investment Management Co., LTD.</p>
-                                <p>Luo Li Software (Zhongshan) Co., LTD.</p>
-                                <p>Zhongshan Shenxun Electronic Control Technology Co., Ltd.</p>
-                                <p>Zhongshan Dong Feng Zhen Qu Ni De Café</p>
-                                <p>Mai Ge Er Supply Chain Management (Shenzhen) Co., LTD.</p>
-                                <p>Hei Tian Shi Business Management (Zhongshan) Co., LTD.</p>
-                                <p>Zhongshan Hong Huo Trading Co., Ltd</p>
-
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Address</td>
-                            <td>
-                                3, Zhi, 5th and 6th Floor, No.87, Dongfu No 4 Road,<br>
-                                Jichang Village, Dongfeng Town,<br>
-                                Zhongshan 528425, Guangdong
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-
-                <br>
-
-                <table>
-                    <tbody>
-                        <tr>
-                            <td width="20%">Name</td>
-                            <td>Huang Tianying</td>
-                        </tr>
-                        <tr>
-                            <td>Chinese Name</td>
-                            <td>邓惠珍</td>
-                        </tr>
-                        <tr>
-                            <td>Board Title</td>
-                            <td>Director</td>
-                        </tr>
-                        <tr>
-                            <td>ID Number</td>
-                            <td>-</td>
-                        </tr>
-                        <tr>
-                            <td>Nationality</td>
-                            <td>Chinese</td>
-                        </tr>
-                        <tr>
-                            <td>Gender</td>
-                            <td>Male</td>
-                        </tr>
-                        <tr>
-                            <td>Other Directorship(s)</td>
-                            <td>
-                                N/A
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Address</td>
-                            <td>
-                                3, Zhi, 5th and 6th Floor, No.87, Dongfu No 4 Road,<br>
-                                Jichang Village, Dongfeng Town,<br>
-                                Zhongshan 528425, Guangdong
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-
+                    <br><br>
+                @endforeach
             </div>
         </section>
         <br>
@@ -1015,53 +819,27 @@
             <h2 class="heading-item">Management Team
             </h2>
             <div class="share-capitals-item">
+                @foreach ($managers as $manager)
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td width="20%">Name</td>
+                                <td>{{ $manager['managerBase']['fullName'] }}</td>
+                            </tr>
+                            <tr>
+                                <td>Job Title</td>
+                                <td>{{ $manager['managerBase']['position'] }}</td>
+                            </tr>
+                            <tr>
+                                <td>Address</td>
+                                <td>N/A
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
 
-                <table>
-                    <tbody>
-                        <tr>
-                            <td width="20%">Name</td>
-                            <td>Deng Yuhua</td>
-                        </tr>
-                        <tr>
-                            <td>Job Title</td>
-                            <td>Managing Director and General Manager</td>
-                        </tr>
-                        <tr>
-                            <td>Address</td>
-                            <td>
-                                3, Zhi, 5th and 6th Floor, No.87, Dongfu No 4 Road<br>
-                                Jichang Village, Dongfeng Town<br>
-                                Zhongshan 528425<br>
-                                Guangdong
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-
-                <br>
-
-                <table>
-                    <tbody>
-                        <tr>
-                            <td width="20%">Name</td>
-                            <td>Kenny Wang</td>
-                        </tr>
-                        <tr>
-                            <td>Job Title</td>
-                            <td>Sales Manager</td>
-                        </tr>
-                        <tr>
-                            <td>Address</td>
-                            <td>
-                                3, Zhi, 5th and 6th Floor, No.87, Dongfu No 4 Road<br>
-                                Jichang Village, Dongfeng Town<br>
-                                Zhongshan 528425<br>
-                                Guangdong
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-
+                    <br>
+                @endforeach
 
             </div>
         </section>

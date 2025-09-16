@@ -1439,13 +1439,20 @@ class ReportController extends Controller
         $theNatureOfTheEnterprise = $result['result']['register']['theNatureOfTheEnterprise'];
         $legalScopeOfOperation = $result['result']['register']['legalScopeOfOperation'];
         $collectionOfCapital = $result['result']['register']['collectionOfCapital'];
+        $registrationAuthority = $result['result']['register']['registrationAuthority'];
+        
         
 
+        $regModifys = $result['result']['regModifys'];
+
+        $directorSupervisors = $result['result']['directorSupervisors'];
+        $managers = $result['result']['managers'];
 
         // Shareholders (example: first shareholder)
         $firstShareholder = $result['result']['shareholders'][0]['basic']['shareholderName'] ?? null;
         $firstShareholderCapital = $result['result']['shareholders'][0]['basic']['capitalContribution'] ?? null;
-
+        $theCountryOfShareholders = $result['result']['shareholders'][0]['basic']['theCountryOfShareholders'] ?? null;
+        
         // Website list
         $websites = array_map(fn($w) => $w['website'], $result['result']['websites']);
 
@@ -1472,7 +1479,9 @@ class ReportController extends Controller
             'registrationNumber', 'socialCreditCode', 'timeOfEstablishment',
             'firstShareholder', 'firstShareholderCapital',
             'websites', 'creditRating', 'creditScore',
-            'totalAssets', 'totalLiabilities', 'shareholderEquity', 'grossRevenue', 'netProfit','theNatureOfTheEnterprise','legalScopeOfOperation','collectionOfCapital'
+            'totalAssets', 'totalLiabilities', 'shareholderEquity', 'grossRevenue', 'netProfit',
+            'theNatureOfTheEnterprise','legalScopeOfOperation','collectionOfCapital','basicCreditLine',
+            'registrationAuthority','regModifys','theCountryOfShareholders','directorSupervisors','managers'
         ));
 
     }
