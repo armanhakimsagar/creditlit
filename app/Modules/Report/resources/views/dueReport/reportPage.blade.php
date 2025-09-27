@@ -866,9 +866,9 @@
                     <thead>
                         <tr>
                             <th>Date of accounts </th>
-                            <th>31-12-2021</th>
-                            <th>31-12-2022</th>
-                            <th>31-12-2023</th>
+                            @foreach ($latestFinancial as $financialHighlightBasic)
+                                <th>{{ $financialHighlightBasic['financialHighlightBasic']['reportDate'] }}</th>
+                            @endforeach
                         </tr>
                     </thead>
                     <tbody>
@@ -894,9 +894,9 @@
                     <tbody>
                         <tr>
                             <td>Main income</td>
-                            <td>49,910,000</td>
-                            <td>59,230,000</td>
-                            <td>100,240,000</td>
+                            @foreach ($latestFinancial as $grossRevenue)
+                                <td>{{ $grossRevenue['financialHighlightProfit']['grossRevenue'] }}</td>
+                            @endforeach
                         </tr>
                         <tr>
                             <td>Cost of sales</td>
@@ -912,9 +912,9 @@
                         </tr>
                         <tr>
                             <td>Total Profit</td>
-                            <td>2,420,000</td>
-                            <td>1,740,000</td>
-                            <td>4,120,000</td>
+                            @foreach ($latestFinancial as $totalProfit)
+                                <td>{{ $totalProfit['financialHighlightProfit']['totalProfit'] }}</td>
+                            @endforeach
                         </tr>
                         <tr>
                             <td>Profit (loss) before tax</td>
@@ -930,9 +930,9 @@
                         </tr>
                         <tr>
                             <td>Net profit (loss)</td>
-                            <td>2,420,000</td>
-                            <td>1,740,000</td>
-                            <td>4,120,000</td>
+                            @foreach ($latestFinancial as $netProfit)
+                                <td>{{ $netProfit['financialHighlightProfit']['totalProfit'] }}</td>
+                            @endforeach
                         </tr>
                     </tbody>
 
@@ -957,9 +957,9 @@
                     <thead>
                         <tr>
                             <th>Date of accounts </th>
-                            <th>31-12-2021</th>
-                            <th>31-12-2022</th>
-                            <th>31-12-2023</th>
+                            @foreach ($latestFinancial as $latestFinancialDate)
+                                <th>{{ $latestFinancialDate['financialHighlightBasic']['reportDate'] }}</th>
+                            @endforeach
                         </tr>
                     </thead>
                     <tbody>
@@ -997,27 +997,31 @@
                         </tr>
                         <tr>
                             <td>Total assets</td>
-                            <td>37,680,000</td>
-                            <td>56,710,000</td>
-                            <td>34,390,000</td>
+                            @foreach ($latestFinancial as $financialHighlightAsset)
+                                <td>{{ $financialHighlightAsset['financialHighlightAsset']['totalAssets'] }}</td>
+                            @endforeach
                         </tr>
                         <tr>
                             <td>Total liabilities</td>
-                            <td>30,050,000</td>
-                            <td>47,340,000</td>
-                            <td>21,530,000</td>
+                            @foreach ($latestFinancial as $balanceOfLiabilities)
+                                <td>{{ $balanceOfLiabilities['financialHighlightBalance']['balanceOfLiabilities'] }}
+                                </td>
+                            @endforeach
                         </tr>
                         <tr>
                             <td>Equity</td>
-                            <td>7,630,000</td>
-                            <td>9,370,000</td>
-                            <td>12,860,000</td>
+                            @foreach ($latestFinancial as $shareholderEquity)
+                                <td>{{ $shareholderEquity['financialHighlightBalance']['shareholderEquity'] }}
+                                </td>
+                            @endforeach
                         </tr>
                         <tr>
                             <td>Total Liabilities and Owner's Equity</td>
-                            <td>37,680,000</td>
-                            <td>56,710,000</td>
-                            <td>34,390,000</td>
+
+                            @foreach ($latestFinancial as $debtAndShareholdersEquity)
+                                <td>{{ $debtAndShareholdersEquity['financialHighlightBalance']['debtAndShareholdersEquity'] }}
+                                </td>
+                            @endforeach
                         </tr>
                     </tbody>
 
@@ -1031,9 +1035,9 @@
                     <thead>
                         <tr>
                             <th>Financial Year </th>
-                            <th>31-12-2021</th>
-                            <th>31-12-2022</th>
-                            <th>31-12-2023</th>
+                            @foreach ($latestFinancial as $latestFinancialDate)
+                                <th>{{ $latestFinancialDate['financialHighlightBasic']['reportDate'] }}</th>
+                            @endforeach
                         </tr>
                     </thead>
                 </table>
@@ -1057,45 +1061,57 @@
                         <tr>
                         <tr>
                             <td>Total Assets</td>
-                            <td>-</td>
-                            <td>12.99</td>
-                            <td>5.93</td>
+
+                            @foreach ($latestFinancial as $financialHighlightAsset)
+                                <td>{{ $financialHighlightAsset['financialHighlightAsset']['totalAssets'] }}</td>
+                            @endforeach
                         </tr>
                         <tr>
                             <td>Total Liabilities</td>
-                            <td>-</td>
-                            <td>12.34</td>
-                            <td>5.49</td>
+                            @foreach ($latestFinancial as $balanceOfLiabilities)
+                                <td>{{ $balanceOfLiabilities['financialHighlightBalance']['balanceOfLiabilities'] }}
+                                </td>
+                            @endforeach
                         </tr>
                         <tr>
                             <td>Total Owner’s Equity</td>
-                            <td>-</td>
-                            <td>13.50</td>
-                            <td>6.27</td>
+
+                            @foreach ($latestFinancial as $debtAndShareholdersEquity)
+                                <td>{{ $debtAndShareholdersEquity['financialHighlightBalance']['debtAndShareholdersEquity'] }}
+                                </td>
+                            @endforeach
                         </tr>
                         <tr>
                             <td>Operating Income</td>
-                            <td>-</td>
-                            <td>25.56</td>
-                            <td>26.01</td>
+
+                            @foreach ($latestFinancial as $debtAndShareholdersEquity)
+                                <td>{{ $debtAndShareholdersEquity['financialHighlightProfit']['grossRevenue'] }}
+                                </td>
+                            @endforeach
                         </tr>
                         <tr>
                             <td>Total Profit</td>
-                            <td>-</td>
-                            <td>427.59</td>
-                            <td>26.32</td>
+
+                            @foreach ($latestFinancial as $debtAndShareholdersEquity)
+                                <td>{{ $debtAndShareholdersEquity['financialHighlightProfit']['totalProfit'] }}
+                                </td>
+                            @endforeach
                         </tr>
                         <tr>
                             <td>Income Tax</td>
-                            <td>-</td>
-                            <td>0.00</td>
-                            <td>200.00</td>
+
+                            @foreach ($latestFinancial as $debtAndShareholdersEquity)
+                                <td>{{ $debtAndShareholdersEquity['financialHighlightProfit']['totalProfit'] }}
+                                </td>
+                            @endforeach
                         </tr>
                         <tr>
                             <td>Net Profit</td>
-                            <td>-</td>
-                            <td>400.00</td>
-                            <td>22.58</td>
+
+                            @foreach ($latestFinancial as $debtAndShareholdersEquity)
+                                <td>{{ $debtAndShareholdersEquity['financialHighlightProfit']['totalProfit'] }}
+                                </td>
+                            @endforeach
                         </tr>
                     </tbody>
 
@@ -1109,9 +1125,9 @@
                     <thead>
                         <tr>
                             <th>Financial Year </th>
-                            <th>31-12-2021</th>
-                            <th>31-12-2022</th>
-                            <th>31-12-2023</th>
+                            @foreach ($latestFinancial as $latestFinancialDate)
+                                <th>{{ $latestFinancialDate['financialHighlightBasic']['reportDate'] }}</th>
+                            @endforeach
                         </tr>
                     </thead>
                 </table>
@@ -1134,21 +1150,27 @@
                     <tbody>
                         <tr>
                             <td>Return on Assets (%)</td>
-                            <td>31.72</td>
-                            <td>18.57</td>
-                            <td>32.04</td>
+                            @foreach ($financialHighlightIndexs as $latestFinancialDate)
+                                <?php if(isset($latestFinancialDate['returnOnNetAssets'])){ ?>
+                                <td>{{ $latestFinancialDate['returnOnNetAssets'] }}</td>
+                                <?php } ?>
+                            @endforeach
                         </tr>
                         <tr>
                             <td>Net profit margin (%)</td>
-                            <td>6.42</td>
-                            <td>3.07</td>
-                            <td>11.98</td>
+                            @foreach ($financialHighlightIndexs as $latestFinancialDate)
+                                <?php if(isset($latestFinancialDate['returnOnTotalAssets'])){ ?>
+                                <td>{{ $latestFinancialDate['returnOnTotalAssets'] }}</td>
+                                <?php } ?>
+                            @endforeach
                         </tr>
                         <tr>
                             <td>Net profit margin (%)</td>
-                            <td>4.85</td>
-                            <td>2.94</td>
-                            <td>4.11</td>
+                            @foreach ($financialHighlightIndexs as $latestFinancialDate)
+                                <?php if(isset($latestFinancialDate['netProfitMargin'])){ ?>
+                                <td>{{ $latestFinancialDate['netProfitMargin'] }}</td>
+                                <?php } ?>
+                            @endforeach
                         </tr>
                     </tbody>
 
@@ -1160,9 +1182,10 @@
                     <tbody>
                         <tr>
                             <td>Operation Capacity</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
+                            @foreach ($financialHighlightIndexs as $latestFinancialDate)
+                                <td>{{ $latestFinancialDate['totalAssetsTurnover'] }}</td>
+                            @endforeach
+
                         </tr>
                     </tbody>
 
@@ -1171,9 +1194,9 @@
                 <table>
                     <tbody>
                         <td>Turnover of total assets</td>
-                        <td>1.32</td>
-                        <td>1.04</td>
-                        <td>2.91</td>
+                        @foreach ($financialHighlightIndexs as $latestFinancialDate)
+                            <td>{{ $latestFinancialDate['totalAssetsTurnover'] }}</td>
+                        @endforeach
                     </tbody>
 
                 </table>
@@ -1185,9 +1208,9 @@
                     <tbody>
                         <tr>
                             <td>Solvency</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
+                            @foreach ($financialHighlightIndexs as $latestFinancialDate)
+                                <td>{{ $latestFinancialDate['assetLiabilityRatio'] }}</td>
+                            @endforeach
                         </tr>
                     </tbody>
 
@@ -1207,32 +1230,15 @@
 
                 <br>
 
-                <table class="no-border">
-                    <tbody>
-                        <tr>
-                            <td>Development Capacity</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                    </tbody>
-
-                </table>
-
                 <table>
                     <tbody>
                         <tr>
                             <td>Yearly Growth of Operating Income (%)</td>
-                            <td>-</td>
-                            <td>69.24</td>
-                            <td>18.67</td>
-                        </tr>
-
-                        <tr>
-                            <td>Yearly growth of total assets (%)</td>
-                            <td>-</td>
-                            <td>-39.36</td>
-                            <td>50.50</td>
+                            @foreach ($financialHighlightIndexs as $latestFinancialDate)
+                                <?php if(isset($latestFinancialDate['yearlyGrowthOfTotalAssets'])){ ?>
+                                <td>{{ $latestFinancialDate['yearlyGrowthOfTotalAssets'] }}</td>
+                                <?php } ?>
+                            @endforeach
                         </tr>
 
                     </tbody>
@@ -1738,7 +1744,7 @@
                 <table>
                     <tbody>
                         <td width="20%">Main Market</td>
-                        <td>Asia, Europe, United States </td>
+                        <td>{{ $sales['saleBase']['foreignSalesArea'] }}</td>
                     </tbody>
 
                 </table>
@@ -1746,8 +1752,8 @@
                     <tbody>
                         <td width="20%">Patent</td>
                         <td>
-                            <span>Patent for utility models: 0</span><br>
-                            <span> Invention patent: 1 </span>
+                            <span>Patent for utility models: {{ $patentCounts[0]['patentType'] }}</span><br>
+                            <span> Invention patent: {{ $patentCounts[0]['patentType'] }} </span>
                         </td>
                     </tbody>
 
@@ -1755,25 +1761,70 @@
                 <table>
                     <tbody>
                         <td width="20%">Copyright</td>
-                        <td>Total Records: 4</td>
+                        <td>Total Records: {{ $copyrightCount['count'] }}</td>
                     </tbody>
 
                 </table>
+
+
                 <table>
                     <tbody>
-                        <td width="20%">Authentication Information</td>
-                        <td>Total Records 4</td>
+                        <td width="20%">Trademarks</td>
+                        <td>Total Trademarks: {{ $trademarkCount['count'] }}</td>
                     </tbody>
 
                 </table>
+
                 <table>
                     <tbody>
                         <td width="20%">Import/Export Permit</td>
-                        <td>Yes</td>
+                        <td> {{ $importExportPower['importExportPower'] }}</td>
                     </tbody>
 
                 </table>
 
+
+                <br>
+                <h4 class="heading-item-subheading">BONDS INFORMATION</h4>
+
+                <table>
+                    <tbody>
+                        <tr>
+                            <td width="30%">Total Number of Bonds</td>
+                            <td>{{ $bondCount['count'] }}</td>
+                        </tr>
+                        <tr>
+                            <td>Circulation Date</td>
+                            <td>{{ $bondCount['count'] }}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Release Date</td>
+                            <td>{{ $bondCount['count'] }}</td>
+                        </tr>
+                        <tr>
+                            <td>Maturity Date</td>
+                            <td>{{ $bondCount['count'] }}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Bond Code</td>
+                            <td>{{ $bondCount['count'] }}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Term Details</td>
+                            <td>{{ $bondCount['count'] }}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Number of Distribution</td>
+                            <td>{{ $bondCount['count'] }}
+                            </td>
+                        </tr>
+
+                    </tbody>
+                </table>
 
                 <br>
                 <h4 class="heading-item-subheading">SALES INFORMATION</h4>
@@ -1793,12 +1844,12 @@
                         <tr>
                             <td>Customer Type</td>
                             <td>
-                                Manufacturing enterprises,traders,etc.
+                                {{ $sales['saleBase']['domesticCustomerType'] }}
                             </td>
                         </tr>
                         <tr>
-                            <td>Numbers Of Customers</td>
-                            <td>-</td>
+                            <td>Payment Terms</td>
+                            <td>{{ $sales['saleBase']['domesticPaymentConditions'] }}</td>
 
                         </tr>
                         <tr>
@@ -1893,128 +1944,107 @@
 
                     </tbody>
                 </table>
-
                 <br>
-
-                <table>
-                    <tbody>
-                        <tr>
-                            <td width="30%">Region</td>
-                            <td>International</td>
-                        </tr>
-                        <tr>
-                            <td>Main Products Purchased </td>
-                            <td>
-                                Other pure polyvinychlorid, in primary forms;etc.
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Numbers Of Suppliers</td>
-                            <td>More than 10</td>
-
-                        </tr>
-                        <tr>
-                            <td>Purchase Areas</td>
-                            <td>
-                                Vietnam;Türkiye;Indonesia;Thailand;Haiti;etc
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Percentage</td>
-                            <td>
-                                -
-                            </td>
-                        </tr>
-
-                    </tbody>
-                </table>
-
-                <br>
-                <h4 class="heading-item-subheading">SUPPLIERS</h4>
+                <h4 class="heading-item-subheading">TOP CUSTOMER</h4>
 
                 <table>
                     <tbody>
                         <tr>
                             <td width="30%">Name</td>
-                            <td>ANHUI FENGHUI METAL CO.,LTD.</td>
-                        </tr>
-                        <tr>
+                            <td>Chinese Name</td>
                             <td>Country</td>
-                            <td>China</td>
                         </tr>
-
+                        @foreach ($mainCustomers as $mainCustomer)
+                            <tr>
+                                <td>{{ $mainCustomer['englishName'] }}</td>
+                                <td>{{ $mainCustomer['chineseName'] }}</td>
+                                <td>{{ $mainCustomer['countryArea'] }}</td>
+                            </tr>
+                        @endforeach
 
                     </tbody>
                 </table>
 
                 <br>
+                <h4 class="heading-item-subheading">TOP SUPPLIERS</h4>
 
                 <table>
                     <tbody>
-                        <tr>
-                            <td width="30%">Name</td>
-                            <td>ANHUI FENGHUI METAL CO.,LTD.</td>
-                        </tr>
-                        <tr>
-                            <td>Country</td>
-                            <td>China</td>
-                        </tr>
+
+                        @foreach ($mainSuppliers as $mainCustomer)
+                            <tr>
+                                <td width="30%">Name</td>
+                                <td>{{ $mainCustomer['englishName'] }}</td>
+                            </tr>
+                            <tr>
+                                <td>Chinees Name</td>
+                                <td>{{ $mainCustomer['chineseName'] }}</td>
+                            </tr>
+                            <tr>
+                                <td>Country</td>
+                                <td>{{ $mainCustomer['countryArea'] }}</td>
+                            </tr>
+                        @endforeach
 
 
                     </tbody>
                 </table>
-
-                <br>
-
-                <table>
-                    <tbody>
-                        <tr>
-                            <td width="30%">Name</td>
-                            <td>ANHUI FENGHUI METAL CO.,LTD.</td>
-                        </tr>
-                        <tr>
-                            <td>Country</td>
-                            <td>China</td>
-                        </tr>
-
-
-                    </tbody>
-                </table>
-
 
                 <br>
                 <h4 class="heading-item-subheading">RATING BY CUSTOMS</h4>
 
                 <table>
                     <tbody>
-                        <tr>
-                            <td width="30%">Rating</td>
-                            <td>Registered and Filed Enterprise</td>
-                        </tr>
-                        <tr>
-                            <td>Custom ID</td>
-                            <td>
-                                4309962023
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Business Category</td>
-                            <td>Shipper & Consignee</td>
+                        @foreach ($generalAdministrationofCustomsRatings as $generalAdministrationofCustomsRating)
+                            <tr>
+                                <td width="30%">Rating</td>
+                                <td>{{ $generalAdministrationofCustomsRating['reating'] }}</td>
+                            </tr>
+                            <tr>
+                                <td>Custom ID</td>
+                                <td>
+                                    {{ $generalAdministrationofCustomsRating['HSCode'] }}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Business Category</td>
+                                <td>{{ $generalAdministrationofCustomsRating['businessCategory'] }}</td>
 
-                        </tr>
-                        <tr>
-                            <td>Validity Period of Customs Declaration</td>
-                            <td>
-                                Long term
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Date Obtained</td>
-                            <td>
-                                2021-01-20
-                            </td>
-                        </tr>
+                            </tr>
+                            <tr>
+                                <td>Validity Period of Customs Declaration</td>
+                                <td>
+                                    {{ $generalAdministrationofCustomsRating['validityPeriodofCustomsDeclaration'] }}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Date Obtained</td>
+                                <td>
+                                    {{ $generalAdministrationofCustomsRating['dateObtained'] }}
+                                </td>
+                            </tr>
+                        @endforeach
+                    </tbody>
+                </table>
 
+                <br>
+                <h4 class="heading-item-subheading">WEBSITES</h4>
+
+                <table>
+                    <tbody>
+                        @foreach ($websites as $website)
+                            <tr>
+                                <td>Website URL</td>
+                                <td>
+                                    {{ $website['website'] }}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Review Date</td>
+                                <td>{{ $website['dataId'] }}</td>
+
+                            </tr>
+                        @endforeach
                     </tbody>
                 </table>
 

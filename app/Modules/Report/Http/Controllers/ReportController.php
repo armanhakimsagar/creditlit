@@ -1460,10 +1460,26 @@ class ReportController extends Controller
         $creditRating = $result['result']['creditRating']['creditRating'];
         $creditScore = $result['result']['creditRating']['creditScore'];
         $basicCreditLine = $result['result']['creditRating']['basicCreditLine'];
+        $financialHighlightIndexs = $result['result']['financialHighlightIndexs'];
+        $sales = $result['result']['sale'];
+        $justice = $result['result']['justice'];
+        $bondCount = $result['result']['bondCount'];
+        $mainCustomers = $result['result']['sale']['mainCustomers'];
+        $patentCounts = $result['result']['patentCounts'];
+        $copyrightCount = $result['result']['copyrightCount'];
+        $trademarkCount = $result['result']['trademarkCount'];
+        $importExportPower = $result['result']['importExportPower'];
+        $mainSuppliers = $result['result']['purchase']['mainSuppliers'];
+        $websites = $result['result']['websites'];
+        $industryBackgrounds = $result['result']['industryBackgrounds'];
+        
+        $generalAdministrationofCustomsRatings = $result['result']['generalAdministrationofCustomsRatings'];
+        
+        
         
 
         // Financial highlights (example: latest year)
-        $latestFinancial = end($result['result']['financialHighlights']);
+        $latestFinancial = $result['result']['financialHighlights'];
         $totalAssets = $latestFinancial['financialHighlightAsset']['totalAssets'] ?? null;
         $totalLiabilities = $latestFinancial['financialHighlightBalance']['balanceOfLiabilities'] ?? null;
         $shareholderEquity = $latestFinancial['financialHighlightBalance']['shareholderEquity'] ?? null;
@@ -1472,16 +1488,16 @@ class ReportController extends Controller
 
         // Pass these variables to blade
         return view('Report::dueReport.reportPage', compact(
-            'orderId', 'completionDate', 'orgId', 'orgName',
+            'orderId', 'completionDate', 'orgId', 'orgName','websites','industryBackgrounds',
             'companyName', 'chineseName', 'englishName', 'enterpriseState',
-            'address', 'addressDetail', 'email', 'telephone',
-            'legalRepresentative', 'registeredCapital', 'registeredCurrency',
-            'registrationNumber', 'socialCreditCode', 'timeOfEstablishment',
-            'firstShareholder', 'firstShareholderCapital',
-            'websites', 'creditRating', 'creditScore',
-            'totalAssets', 'totalLiabilities', 'shareholderEquity', 'grossRevenue', 'netProfit',
+            'address', 'addressDetail', 'email', 'telephone','patentCounts','generalAdministrationofCustomsRatings',
+            'legalRepresentative', 'registeredCapital', 'registeredCurrency','mainSuppliers',
+            'registrationNumber', 'socialCreditCode', 'timeOfEstablishment','importExportPower',
+            'firstShareholder', 'firstShareholderCapital','mainCustomers','copyrightCount','trademarkCount',
+            'websites', 'creditRating', 'creditScore','sales','justice','bondCount',
+            'totalAssets', 'totalLiabilities', 'shareholderEquity', 'grossRevenue', 'netProfit','latestFinancial',
             'theNatureOfTheEnterprise','legalScopeOfOperation','collectionOfCapital','basicCreditLine',
-            'registrationAuthority','regModifys','theCountryOfShareholders','directorSupervisors','managers'
+            'registrationAuthority','regModifys','theCountryOfShareholders','directorSupervisors','managers','financialHighlightIndexs'
         ));
 
     }
