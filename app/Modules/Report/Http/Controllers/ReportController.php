@@ -1471,6 +1471,8 @@ class ReportController extends Controller
         $importExportPower = $result['result']['importExportPower'];
         $mainSuppliers = $result['result']['purchase']['mainSuppliers'];
         $websites = $result['result']['websites'];
+        $branchs = $result['result']['branchs'];
+        $taxRatings = $result['result']['taxRatings'];
         $industryBackgrounds = $result['result']['industryBackgrounds'];
         
         $generalAdministrationofCustomsRatings = $result['result']['generalAdministrationofCustomsRatings'];
@@ -1489,7 +1491,7 @@ class ReportController extends Controller
         // Pass these variables to blade
         return view('Report::dueReport.reportPage', compact(
             'orderId', 'completionDate', 'orgId', 'orgName','websites','industryBackgrounds',
-            'companyName', 'chineseName', 'englishName', 'enterpriseState',
+            'companyName', 'chineseName', 'englishName', 'enterpriseState','branchs','taxRatings',
             'address', 'addressDetail', 'email', 'telephone','patentCounts','generalAdministrationofCustomsRatings',
             'legalRepresentative', 'registeredCapital', 'registeredCurrency','mainSuppliers',
             'registrationNumber', 'socialCreditCode', 'timeOfEstablishment','importExportPower',

@@ -2061,16 +2061,16 @@
             <h2 class="heading-item">Industry Information
             </h2>
             <div class="share-capitals-item">
-
                 <table>
                     <tbody>
                         <tr>
                             <td width="30%">Industry Code and Title</td>
-                            <td>2669, PRODUCTION OF OTHER SPECIALTY CHEMICALS</td>
+                            <td>{{ $industryBackgrounds[0]['chineseSicCode'] }},
+                                {{ $industryBackgrounds[0]['industryName'] }}</td>
                         </tr>
                         <tr>
                             <td>Short Description</td>
-                            <td>634068841019</td>
+                            <td>{{ $industryBackgrounds[0]['definition'] }}</td>
                         </tr>
 
                     </tbody>
@@ -2082,25 +2082,48 @@
         <br>
 
         <section class="banking-information">
-            <h2 class="heading-item">Banking Information
+            <h2 class="heading-item">Branch/Plant Office
             </h2>
             <div class="share-capitals-item">
 
                 <table>
                     <tbody>
-                        <tr>
-                            <td width="20%">Bank Name</td>
-                            <td>Bank of China, Zhongshan Dong Feng SubSub-branch</td>
-                        </tr>
-                        <tr>
-                            <td>Account Number</td>
-                            <td>634068841019</td>
-                        </tr>
-                        <tr>
-                            <td>Vat/Tax Status</td>
-                            <td>Active</td>
-                        </tr>
-
+                        @foreach ($branchs as $branch)
+                            <?php if(isset($branch['englishName'])){ ?>
+                            <tr>
+                                <td width="20%">Name</td>
+                                <td>{{ $branch['englishName'] }}</td>
+                            </tr>
+                            <tr>
+                                <td>Chinese Name</td>
+                                <td>{{ $branch['chineseName'] }}</td>
+                            </tr>
+                            <tr>
+                                <td>Type</td>
+                                <td>{{ $branch['affiliateType'] }}</td>
+                            </tr>
+                            <tr>
+                                <td>Registration No</td>
+                                <td>{{ $branch['registrationNumber'] }}</td>
+                            </tr>
+                            <tr>
+                                <td>Registration Date</td>
+                                <td>{{ $branch['timeOfEstablishment'] }}</td>
+                            </tr>
+                            <tr>
+                                <td>Social Security No</td>
+                                <td>{{ $branch['socialCreditCode'] }}</td>
+                            </tr>
+                            <tr>
+                                <td>Status</td>
+                                <td>{{ $branch['enterpriseState'] }}</td>
+                            </tr>
+                            <tr>
+                                <td>Address </td>
+                                <td>China</td>
+                            </tr>
+                            <?php } ?>
+                        @endforeach
                     </tbody>
                 </table>
 
@@ -2108,184 +2131,6 @@
             </div>
         </section>
         <br>
-
-        <section class="branch-information">
-            <h2 class="heading-item">Branch Office
-            </h2>
-            <div class="share-capitals-item">
-
-                <table>
-                    <tbody>
-                        <tr>
-                            <td width="20%">Name</td>
-                            <td>Shanghai Branch Office</td>
-                        </tr>
-                        <tr>
-                            <td>Type</td>
-                            <td>Operating Office Address</td>
-                        </tr>
-                        <tr>
-                            <td>Address</td>
-                            <td>
-                                <address>
-                                    Room No 729, 7th Floor, Yuzhou Intl Phase 1
-                                    No.333 Jingang Road, Pudong New Area
-                                    Shanghai
-                                    China
-                                </address>
-                            </td>
-                        </tr>
-
-                    </tbody>
-                </table>
-
-                <br>
-
-                <table>
-                    <tbody>
-                        <tr>
-                            <td width="20%">Name</td>
-                            <td>Harbin Branch Office</td>
-                        </tr>
-                        <tr>
-                            <td>Type</td>
-                            <td>Operating Office Address</td>
-                        </tr>
-                        <tr>
-                            <td>Address</td>
-                            <td>
-                                <address>
-                                    Room 502, 5th Floor, Pufa Plaza
-                                    209 Changjiang Road
-                                    Nangang District
-                                    Harbin
-                                    China
-                                </address>
-                            </td>
-                        </tr>
-
-                    </tbody>
-                </table>
-
-
-            </div>
-        </section>
-        <br>
-
-
-        <section class="recruitments">
-            <h2 class="heading-item">Recruitments
-            </h2>
-            <div class="share-capitals-item">
-
-                <table>
-                    <tbody>
-                        <tr>
-                            <td width="20%">Position</td>
-                            <td>Boiler</td>
-                        </tr>
-                        <tr>
-                            <td>Working Place</td>
-                            <td>Heshan District</td>
-                        </tr>
-                        <tr>
-                            <td>Date</td>
-                            <td>
-                                2017-12-25
-                            </td>
-                        </tr>
-
-                    </tbody>
-                </table>
-
-                <br>
-
-                <table>
-                    <tbody>
-                        <tr>
-                            <td width="20%">Position</td>
-                            <td>Boiler</td>
-                        </tr>
-                        <tr>
-                            <td>Working Place</td>
-                            <td>Heshan District</td>
-                        </tr>
-                        <tr>
-                            <td>Date</td>
-                            <td>
-                                2017-12-25
-                            </td>
-                        </tr>
-
-                    </tbody>
-                </table>
-
-            </div>
-        </section>
-        <br>
-
-
-        <section class="tender-information">
-            <h2 class="heading-item">Tender Information
-            </h2>
-            <div class="share-capitals-item">
-
-                <table>
-                    <tbody>
-                        <tr>
-                            <td width="20%">No</td>
-                            <td>01</td>
-                        </tr>
-                        <tr>
-                            <td>Title</td>
-                            <td>
-                                <a href="">Hunan haosen glue industry co., ltd. annual output of 5000 tons of
-                                    wet curing
-                                    reactive
-                                    polyurethane hot melt adhesive project name and scale change publicity</a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Publishing Date</td>
-                            <td>
-                                2024-02-28
-                            </td>
-                        </tr>
-
-                    </tbody>
-                </table>
-
-                <br>
-
-                <table>
-                    <tbody>
-                        <tr>
-                            <td width="20%">No</td>
-                            <td>01</td>
-                        </tr>
-                        <tr>
-                            <td>Title</td>
-                            <td>
-                                <a href="">Hunan haosen glue industry co., ltd. annual output of 5000 tons of
-                                    wet curing
-                                    reactive
-                                    polyurethane hot melt adhesive project name and scale change publicity</a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Publishing Date</td>
-                            <td>
-                                2017-12-25
-                            </td>
-                        </tr>
-
-                    </tbody>
-                </table>
-
-            </div>
-        </section>
-        <br>
-
 
         <section class="tax-rating">
             <h2 class="heading-item">Tax Rating
@@ -2294,49 +2139,27 @@
 
                 <table>
                     <tbody>
-                        <tr>
-                            <td width="20%">Year</td>
-                            <td>2023</td>
-                        </tr>
-                        <tr>
-                            <td>Taxpayer ID </td>
-                            <td>
-                                914309005507151909
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Taxpayer Credit Rating </td>
-                            <td>
-                                A
-                            </td>
-                        </tr>
-
+                        @foreach ($taxRatings as $taxRating)
+                            <tr>
+                                <td width="20%">Year</td>
+                                <td>{{ $taxRating['particularYear'] }}</td>
+                            </tr>
+                            <tr>
+                                <td>Taxpayer ID </td>
+                                <td>
+                                    {{ $taxRating['taxpayerIdentificationNumber'] }}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Taxpayer Credit Rating </td>
+                                <td>
+                                    {{ $taxRating['taxCreditRating'] }}
+                                </td>
+                            </tr>
+                        @endforeach
                     </tbody>
                 </table>
 
-                <br>
-
-                <table>
-                    <tbody>
-                        <tr>
-                            <td width="20%">Year</td>
-                            <td>2022</td>
-                        </tr>
-                        <tr>
-                            <td>Taxpayer ID </td>
-                            <td>
-                                914309005507151909
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Taxpayer Credit Rating </td>
-                            <td>
-                                A
-                            </td>
-                        </tr>
-
-                    </tbody>
-                </table>
 
             </div>
         </section>
